@@ -34,6 +34,9 @@ jobs: # WHAT runs
     runs-on: ubuntu-latest
     environment: production # GitHub Environment (approvals, secrets)
     steps:
+      - name: Checkout code # each job runs on a fresh runner, so fetch the repo again
+        uses: actions/checkout@v4
+
       - name: Deploy
         run: ./deploy.sh
         env:
