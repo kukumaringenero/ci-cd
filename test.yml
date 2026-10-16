@@ -1,0 +1,27 @@
+test: some name for this field
+
+# This is a comment
+list2:
+  - 1
+  - 2
+  - 3
+list: [{ name: foo, value: bar }, { name: foo2, value: bar2 }]
+
+list3:
+  - name: foo
+    value: bar
+  - name: foo2
+    value: bar2
+jobs:
+  job-name1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+  job-name2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+list4:
+  - name:
